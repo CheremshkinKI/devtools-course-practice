@@ -1,10 +1,10 @@
+// Copyright 2022 Cheremushkin Kirill
 #include <sstream>
 #include <iterator>
 #include <iostream>
 #include <string>
 #include "include/app_equation.h"
-std::string appEquation::getHelp(const std::string& appname)
-{
+std::string appEquation::getHelp(const std::string& appname) {
     return "This is an application to demonstrate"
         " the operation of the calculating the kvadratnoe uravleniy\n"
         "Format for arguments:\n"
@@ -28,7 +28,7 @@ int appEquation::parseArgument(const char* arg) {
 
 std::string appEquation::operator()(int argc, const char** argv) {
     double a, b, c;
-    double res[2] = {0,0};
+    double res[2] = {0, 0};
 
     if (argc == 1)
         return getHelp(argv[0]);
@@ -41,9 +41,9 @@ std::string appEquation::operator()(int argc, const char** argv) {
             std::string error_msg = "Should be 3 argument";
             throw std::runtime_error(error_msg);
         }
-        std::cout << argc<<std::endl;
+        std::cout << argc << std::endl;
         for (int i = 0; i < 4; i++) {
-            std::cout << argv[i]<<std::endl;
+            std::cout << argv[i] << std::endl;
         }
         a = parseArgument(argv[1]);
         b = parseArgument(argv[2]);
@@ -56,6 +56,6 @@ std::string appEquation::operator()(int argc, const char** argv) {
     Equation bv = Equation(a, b, c);
     Equation::SolveEQ(bv, res);
     std::ostringstream oss;
-    oss << res[0]<<", "<<res[1];
+    oss << res[0] << ", " << res[1];
     return oss.str();
 }
