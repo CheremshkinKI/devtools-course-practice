@@ -1,7 +1,7 @@
 // Copyright 2022 Cheremushkin Kirill
 #pragma once
-#ifndef MODULES_OSKIN_G_EQUATION_INCLUDE_EQUATION_H_APPLICATION_H_
-#define MODULES_OSKIN_G_EQUATION_INCLUDE_EQUATION_H_APPLICATION_H_
+#ifndef MODULES_OSKIN_G_EQUATION_INCLUDE_APP_EQUATION_H_
+#define MODULES_OSKIN_G_EQUATION_INCLUDE_APP_EQUATION_H_
 #include <string>
 #include "include/equation.h"
 class appEquation {
@@ -12,4 +12,4 @@ class appEquation {
  public:
     std::string operator()(int argc, const char** argv);
 };
-#endif  // MODULES_OSKIN_G_EQUATION_INCLUDE_EQUATION_H_APPLICATION_H_
+#endif  // MODULES_OSKIN_G_EQUATION_INCLUDE_APP_EQUATION_H_
